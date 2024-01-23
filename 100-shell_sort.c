@@ -7,7 +7,7 @@
  **/
 void shell_sort(int *array, size_t size)
 {
-	unsigned int gap = 1, i, j;
+	unsigned int gap = 1, a, k;
 	int temp;
 
 	if (array == NULL)
@@ -19,16 +19,16 @@ void shell_sort(int *array, size_t size)
 
 	while (gap > 0)
 	{
-		for (i = gap; i < size; i++)
+		for (a = gap; a < size; a++)
 		{
-			temp = array[i];
-			j = i;
-			while (j >= gap && array[j - gap] > temp)
+			temp = array[a];
+			k = a;
+			while (k >= gap && array[k - gap] > temp)
 			{
-				array[j] = array[j - gap];
-				j -= gap;
+				array[k] = array[k - gap];
+				k -= gap;
 			}
-			array[j] = temp;
+			array[k] = temp;
 		}
 		print_array(array, size);
 		gap /= 3;

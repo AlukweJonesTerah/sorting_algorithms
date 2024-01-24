@@ -2,21 +2,21 @@
 
 /**
  * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * @a: The first integer to be swapped.
+ * @b: The second integer to be swapped.
  */
 void swap_ints(int *a, int *b)
 {
-	int tmp;
+	int temp;
 
-	tmp = *a;
+	temp = *a;
 	*a = *b;
-	*b = tmp;
+	*b = temp;
 }
 
 /**
  * selection_sort - Sort an array of integers in ascending order
- *                  using the selection sort algorithm.
+ *                  using the selection sort method
  * @array: An array of integers.
  * @size: The size of the array.
  *
